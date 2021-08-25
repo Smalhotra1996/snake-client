@@ -11,9 +11,18 @@ const connect = function() {
   });
 
   // interpret incoming data as text
+
+
+  // setInterval(function(){ alert("Hello"); }, 3000);
+
+
   conn.setEncoding("utf8");
   conn.on("connect", () => {
+   setInterval(function(){ conn.write("Move: up");},1000); 
     conn.write("Name: Sonam");
+    setInterval(function(){ conn.write("Move: down");},500);
+    setInterval(function(){ conn.write("Move: left");},500);
+    setInterval(function(){ conn.write("Move: right");},5800);
   });
   return conn;
 };
