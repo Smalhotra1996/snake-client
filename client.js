@@ -20,7 +20,8 @@ const connect = function() {
   conn.on("connect", () => {
    setInterval(function(){ conn.write("Move: up");},1000); 
     conn.write("Name: Sonam");
-    setInterval(function(){ conn.write("Move: down");},500);
+    conn.write("Hello everyone");
+    setInterval(function(){ conn.write("Move: down");},200);
     setInterval(function(){ conn.write("Move: left");},500);
     setInterval(function(){ conn.write("Move: right");},5800);
   });
